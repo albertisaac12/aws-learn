@@ -82,3 +82,48 @@
 ### 📌 Summary
 
 Cloud computing provides scalable, flexible, and cost-effective IT resources accessible over the internet with minimal management effort, enabling businesses to innovate and operate efficiently at global scale.
+
+
+# Cloud Service Models Responsibility Table
+
+| Component        | On-Premises | IaaS                | PaaS                 | SaaS                |
+|------------------|-------------|---------------------|----------------------|---------------------|
+| Applications     | You         | You                 | You                  | Provider            |
+| Data             | You         | You                 | You                  | Provider            |
+| Runtime          | You         | You                 | Provider             | Provider            |
+| Middleware       | You         | You                 | Provider             | Provider            |
+| Operating System | You         | You                 | Provider             | Provider            |
+| Virtualization   | You         | Provider            | Provider             | Provider            |
+| Servers          | You         | Provider            | Provider             | Provider            |
+| Storage          | You         | Provider            | Provider             | Provider            |
+| Networking       | You         | Provider            | Provider             | Provider            |
+
+✅ **Key:**
+- **You** manage it yourself.
+- **Provider** (Managed by others) is managed by the cloud provider.
+
+> This table shows how responsibility shifts from **fully self-managed in On-Premises** to **fully provider-managed in SaaS**, with IaaS and PaaS offering intermediate levels of management.
+
+## Examples of Each type :
+
+### IaaS
+
+1. Amazon EC2
+2. GCP, AZURE, RACKSPACE, DIGITAL OCEAN, LINODE
+
+### PaaS
+
+1. Elastic Beanstalk (on AWS)
+2. Heroku, Google App Engine (GCP), Windows Azure (Microsoft)
+
+### Software as a Service
+1. Many AWS services (Ex: Rekognition for Machine Learning)
+2. Google Apps(Gmail), Dropbox, Zoom
+
+## Pricing on Cloud- Quick Overview
+
+### AWS gas 3 pricing fundamentals, following the pay-as-you-go pricing model
+
+1. Compute : Pay for the compute time
+2. Storage : Pay for the data stored in the Cloud
+3. Data transfer OUT of the Cloud: Data transfer IN is free.
