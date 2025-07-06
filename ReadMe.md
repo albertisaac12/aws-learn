@@ -120,10 +120,89 @@ Cloud computing provides scalable, flexible, and cost-effective IT resources acc
 1. Many AWS services (Ex: Rekognition for Machine Learning)
 2. Google Apps(Gmail), Dropbox, Zoom
 
+---
+
 ## Pricing on Cloud- Quick Overview
 
 ### AWS gas 3 pricing fundamentals, following the pay-as-you-go pricing model
 
-1. Compute : Pay for the compute time
-2. Storage : Pay for the data stored in the Cloud
-3. Data transfer OUT of the Cloud: Data transfer IN is free.
+1. **Compute** : Pay for the compute time
+2. **Storage** : Pay for the data stored in the Cloud
+3. **Data transfer OUT of the Cloud**: Data transfer IN is free.
+
+---
+
+### AWS Region Choices
+
+1. **Compliance**: With data governance and legal requirments: data never leaves a region without your explicit permission.
+2. **Proximity to customers**: reduced latency
+3. **Available Services**: Within a Region, new services and new features may or may not be available.
+4. **Pricing**: pricing varies region to region and is transparent in the service pricing page.
+5. **Avilability Zones** : Each region has many availability zones (usually 3, min is 3, max is 6). Each AZ is one or more discrete data centers with redundant power, networking, and connectivity 
+
+> Global Services and Region-Scoped
+
+---
+
+## Shared Responsibility Model diagram
+
+Customer: Responsibility for Security "IN" the CLOUD.
+AWS: Responsibility for Security "OF" the CLOUD.
+
+![source: https://www.udemy.com/course/aws-certified-cloud-practitioner-new/](./IMAGES/SharedResponsibilityModel.png)
+
+---
+
+## AWS Acceptable Use Policy Examples
+
+1. No Illegal, Harmful, or Offensive Use Or Content
+2. No Security Violations
+3. No Network Abuse
+4. No E-Mail or Other Message Abuse
+
+
+---
+
+## IAM
+
+### Identity and Access Management : Users and Groups
+1. Global Service
+2. Root account created by default, shouldn't be used or shared
+3. Users are people within your org, and can be grouped.
+4. Users don't have to belong to a group(Not the best practice), and user can belong to multiple groups.
+
+Why users ? => To give them permissions to use services
+Users can be assigned JSON documents called policies
+
+
+Group level policies will be applied to all the members of the group
+
+**Inline policy** is only attached to the User
+
+If the same user belong to a different groups, they will have 2 different policies
+
+### IAM POLICY STRUCTURE
+
+```json
+    {
+        "Version" : "", // Policy language version, always include "2012-10-17"
+        "ID" : "", // An identifier for the policy optional
+        "Statement" : [ // One or More individual statements (Required)
+            {
+                "Sid" : "", // identifier for the statement optional
+                "Effect" : "", // weather the statement allows or denies Access (Allow, Deny)
+                "Principal" : { // account/user/role to which the policy applied to
+                    "AWS" : [""]
+                },
+                "Action" : [ // list of actions this policy allows or denies
+
+                ],
+                "Resource": [] // List of resources to which the actions applied to
+            }
+        ]
+    }
+
+
+
+```
+
