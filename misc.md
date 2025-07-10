@@ -60,3 +60,14 @@ Enable MFA on all accounts
 Rotate all your keys often
 Use IAM tools to apply appropriate permissions
 Analyze access patterns and review permissions
+
+
+Generally one cannot access Billing information other than root account even if one has administrator access. To actually see the billing info we need to make sure to enable IAM user and role access to Billing information from the root account
+
+EC2 is one of the most popular of AWS' offering
+EC2 = Elastic Compute Cloud = Infrastructure as a Service 
+
+Rent Vm's EC2
+Storing data on virtual drives EBS
+Distributing load across machines ELB
+Scaling the services using an Auto Scaling Group (ASG )
